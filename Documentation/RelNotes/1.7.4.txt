@@ -1,5 +1,5 @@
-Git v1.7.4 Release Notes (draft)
-================================
+Git v1.7.4 Release Notes
+========================
 
 Updates since v1.7.3
 --------------------
@@ -66,7 +66,7 @@ Updates since v1.7.3
    objects unnecessarily.
 
  * "git diff" and "git grep" learned what functions and subroutines
-   in Fortran and Perl look like.
+   in Fortran, Pascal and Perl look like.
 
  * "git fetch" learned the "--recurse-submodules" option.
 
@@ -146,14 +146,11 @@ release, unless otherwise noted.
 
  * "git push --progress" shows progress indicators now.
 
+ * "git rebase -i" showed a confusing error message when given a
+   branch name that does not exist.
+
  * "git repack" places its temporary packs under $GIT_OBJECT_DIRECTORY/pack
    instead of $GIT_OBJECT_DIRECTORY/ to avoid cross directory renames.
 
  * "git submodule update --recursive --other-flags" passes flags down
    to its subinvocations.
-
----
-exec >/var/tmp/1
-O=v1.7.4-rc2
-echo O=$(git describe master)
-git shortlog --no-merges ^maint ^$O master
